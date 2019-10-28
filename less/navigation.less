@@ -3,7 +3,11 @@
 .nav-wrapper {
     .displayflex(center, center);
     flex-direction: column;
-    background-color: @sea-shell;
+    background-color: rgba(241, 241, 241, .9);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0;
+    width: 100%; 
+    margin-bottom: 65px;
 
     @media @phone {
         width: 100%;
@@ -34,9 +38,6 @@
             &:hover {
                 color: @waterloo;
               }
-
-            
-
         }
     }
 }
