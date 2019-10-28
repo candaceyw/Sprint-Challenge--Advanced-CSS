@@ -137,6 +137,9 @@ table {
 html {
   font-size: 62.5%;
 }
+html html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   font-family: 'Ubuntu', sans-serif;
@@ -337,12 +340,27 @@ footer {
   }
 }
 .walk .walk-text .btn button {
+  animation-duration: 3s;
+  animation-name: bounceIn;
   padding: 2%;
   font-size: 1.8rem;
   width: 35%;
   background-color: #23293B;
   color: white;
   border-radius: 10px;
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .walk .walk-text .btn button:hover {
   background-color: #81848E;
@@ -369,4 +387,79 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.form-wrapper {
+  background-color: #F1F1F1;
+  border-radius: 20px;
+  padding: 10%;
+  text-align: center;
+  margin: 20px 0;
+}
+.form-wrapper form {
+  font-size: 2rem;
+  line-height: 3;
+}
+.form-wrapper .btn {
+  animation-duration: 3s;
+  animation-name: bounceIn;
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 500px) {
+  .form-wrapper .btn {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.form-wrapper .btn submit {
+  padding: 2%;
+  font-size: 1.8rem;
+  width: 35%;
+  background-color: #23293B;
+  color: white;
+  border-radius: 10px;
+  padding: 2% 5%;
+}
+.form-wrapper .btn submit:hover {
+  background-color: #81848E;
+  color: #23293B;
+}
+@media (max-width: 500px) {
+  .form-wrapper .btn submit {
+    width: 95%;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+}
+hr {
+  margin-top: 100px;
+  border-top: 1px solid;
+}
+#introText a {
+  font-style: bold;
+  text-decoration: none;
+  background-color: #F1F1F1;
+  color: #23293B;
+  padding: 2%;
+  border-radius: 10px;
+}
+#introText a:hover {
+  background-color: #81848E;
+  color: white;
+}
+p {
+  line-height: 2;
 }
